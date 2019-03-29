@@ -9,3 +9,9 @@ title: IoT Edge Computing
 
 [Easily perform facial analysis on live feeds by creating a serverless video analytics environment using Amazon Rekognition Video and Amazon Kinesis Video Streams](https://aws.amazon.com/blogs/machine-learning/easily-perform-facial-analysis-on-live-feeds-by-creating-a-serverless-video-analytics-environment-with-amazon-rekognition-video-and-amazon-kinesis-video-streams/)
 [Greengrass](https://aws.amazon.com/greengrass/)
+
+[Amazon Kinesis Video Streams](https://aws.amazon.com/kinesis/video-streams/raspberry-pi-tutorial/)
+ * [amazon-kinesis-video-streams-producer-sdk-cpp](https://github.com/awslabs/amazon-kinesis-video-streams-producer-sdk-cpp)
+ * [Architecting your IoT App using Raspberry Pi and AWS](https://medium.com/coinmonks/architecting-your-iot-app-using-raspberry-pi-and-aws-b8b89e3ac39a)
+
+[How to easily Detect Objects with Deep Learning on Raspberry Pi](https://medium.com/nanonets/how-to-easily-detect-objects-with-deep-learning-on-raspberrypi-225f29635c74)
