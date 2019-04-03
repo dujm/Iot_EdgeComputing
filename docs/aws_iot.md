@@ -1,46 +1,47 @@
+---
+title: Connect to AWS IoT
+---
 
-### Register a device#
-A thing is the representation and record of your physical device in the cloud. Any physical device needs a thing record in order to work with AWS IoT.
-  * Choose Linux/OS
-  * Choose Python
-
-### Download a connection kit
-The connection kit includes some important components: security credentials, the SDK of your choice, and a sample project.
-
-  * Download to a directory
-  * Mine is /iot 
-
-
-
-### Configure and test your device
-Using the connection kit, you will configure your device by transferring files and running a script, and test that it is connected to AWS IoT correctly.
-
-[Doc:Connect to AWS IoT](https://eu-central-1.console.aws.amazon.com/iot/home?region=eu-central-1#/connectdevice/)
-
+### 1. Install aws-iot in Raspberry Pi 
 [Doc:Install aws-iot-device-sdk-python](https://docs.aws.amazon.com/greengrass/latest/developerguide/IoT-SDK.html)
 
 ```
-# Step 0 Setup 
 # Install git 
 sudo apt-get install git
-# Install pdf reader
-sudo apt-get install okular
 
-# Install AWSIoTPythonSDK 
+# Check OpenSSL version
 python
 >>> import ssl
 >>> print(ssl.OPENSSL_VERSION)
 OpenSSL 1.1.0j  20 Nov 2018
 >>> exit()
+# If the OpenSSL version is < 1.0.1, update OpenSSL for 
+your distribution 
+sudo apt-get update openssl
 
-# install the AWS IoT Device SDK for Python:
+# Install the AWS IoT Device SDK for Python:
 cd iot 
 git clone https://github.com/aws/aws-iot-device-sdk-python.git
 cd aws-iot-device-sdk-python
-
-
+sudo python setup.py install
 
 ```
+### 2. Connect to AWS IoT
+#### 2.1 Register a device
+  * Choose Linux/OS
+  * Choose Python
+  * [Doc:Connect to AWS IoT](https://eu-central-1.console.aws.amazon.com/iot/home?region=eu-central-1#/connectdevice/)
+
+
+#### 2.2 Download a connection kit
+The connection kit includes some important components: security credentials, the SDK of your choice, and a sample project.
+  * Download the zip file to a directory
+  * Mine is /iot 
+
+
+#### 2.3 Configure and test your device
+Using the connection kit, you will configure your device by transferring files and running a script, and test that it is connected to AWS IoT correctly.
+
 
 ```
 # Step 1: Unzip the connection kit on the device
