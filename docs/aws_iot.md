@@ -56,23 +56,24 @@ chmod +x start.sh
 ./start.sh
 
 # Waiting for messages from your device
-  '''Messages are like
+  '''
   Received a new message: 
   {"message": "Hello World!", "sequence": 681} 
   from topic: 
-  sdk/test/Python'''
+  sdk/test/Python
+  '''
 
 
 ```
 
 
 ### 3. AWS IoT Greengrass 
-AWS IoT Greengrass lets your devices process the data they generate locally, while still taking advantage of AWS services when an internet connection is available.
+AWS IoT Greengrass lets your devices process the data they generate locally, while still taking advantage of AWS services when an internet connection is available.  
 [Doc](https://eu-central-1.console.aws.amazon.com/iot/home?region=eu-central-1#/greengrassIntro)
  * A series of clicks 
-  * Create a Group
-  * Easy Group creation (recommended)
-  * Name your Group: mine is 'PE'
-  * Next  
-  * Download tar.gz file
+   * Create a Group
+   * Easy Group creation (recommended)
+   * Name your Group: mine is 'PE'
+   * Next  
+   * Download tar.gz file
 
