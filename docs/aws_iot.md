@@ -3,7 +3,8 @@ title: Connect to AWS IoT
 ---
 
 
-####  [Project Page](https://dujm.github.io/Iot_EdgeComputing)&nbsp;  | &nbsp;   [AWS IoT Setup](https://dujm.github.io/Iot_EdgeComputing/aws_iot)
+####  [Project Page](https://dujm.github.io/Iot_EdgeComputing/index)&nbsp;  | &nbsp;   [AWS IoT Setup](https://dujm.github.io/Iot_EdgeComputing/aws_iot)
+
 
 
 ### 1. Install aws-iot in Raspberry Pi 
