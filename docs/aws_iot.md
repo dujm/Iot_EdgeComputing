@@ -35,13 +35,11 @@ sudo python setup.py install
 
 #### 2.2 Download a connection kit
 The connection kit includes some important components: security credentials, the SDK of your choice, and a sample project.
-  * Download the zip file to a directory
-  * Mine is /iot 
+  * I downloaded the zip file to /home/pi/Iot_EdgeComputing/src
 
 
 #### 2.3 Configure and test your device
 Using the connection kit, you will configure your device by transferring files and running a script, and test that it is connected to AWS IoT correctly.
-
 
 ```
 # Step 1: Unzip the connection kit on the device
@@ -58,5 +56,23 @@ chmod +x start.sh
 ./start.sh
 
 # Waiting for messages from your device
+  '''Messages are like
+  Received a new message: 
+  {"message": "Hello World!", "sequence": 681} 
+  from topic: 
+  sdk/test/Python'''
+
 
 ```
+
+
+### 3. AWS IoT Greengrass 
+AWS IoT Greengrass lets your devices process the data they generate locally, while still taking advantage of AWS services when an internet connection is available.
+[Doc](https://eu-central-1.console.aws.amazon.com/iot/home?region=eu-central-1#/greengrassIntro)
+ * A series of clicks 
+  * Create a Group
+  * Easy Group creation (recommended)
+  * Name your Group: mine is 'PE'
+  * Next  
+  * Download tar.gz file
+
