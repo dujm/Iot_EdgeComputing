@@ -89,3 +89,11 @@ target/
 .mypy_cache/
 
 *draft
+Download
+*.zip
+*.gz
+*pineapple
+*.pub
+*.pem
+*.key
+*.private.key
