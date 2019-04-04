@@ -88,7 +88,7 @@ target/
 # Mypy cache
 .mypy_cache/
 
-*draft
+*draft.md
 Download
 *.zip
 *.gz
