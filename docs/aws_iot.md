@@ -3,15 +3,15 @@ title: Connect to AWS IoT
 ---
 
 
-####  [Project Page](https://dujm.github.io/Iot_EdgeComputing/index)&nbsp;  | &nbsp;   [AWS IoT Setup](https://dujm.github.io/Iot_EdgeComputing/aws_iot)
+####  [Project Page](https://dujm.github.io/Iot_EdgeComputing/index)&nbsp;  | &nbsp;   [AWS IoT Setup](https://dujm.github.io/Iot_EdgeComputing/aws_iot)&nbsp;  | &nbsp;   [AWS IoT Greengrass](https://dujm.github.io/Iot_EdgeComputing/aws_greengrass)
 
 
 
-### 1. Install aws-iot in Raspberry Pi 
+### 1. Install aws-iot in Raspberry Pi
 [Doc:Install aws-iot-device-sdk-python](https://docs.aws.amazon.com/greengrass/latest/developerguide/IoT-SDK.html)
 
 ```
-# Install git 
+# Install git
 sudo apt-get install git
 
 # Check OpenSSL version
@@ -20,12 +20,12 @@ python
 >>> print(ssl.OPENSSL_VERSION)
 OpenSSL 1.1.0j  20 Nov 2018
 >>> exit()
-# If the OpenSSL version is < 1.0.1, update OpenSSL for 
-your distribution 
+# If the OpenSSL version is < 1.0.1, update OpenSSL for
+your distribution
 sudo apt-get update openssl
 
 # Install the AWS IoT Device SDK for Python:
-cd iot 
+cd /home/pi/Iot_EdgeComputing/src
 git clone https://github.com/aws/aws-iot-device-sdk-python.git
 cd aws-iot-device-sdk-python
 sudo python setup.py install
@@ -48,7 +48,7 @@ Using the connection kit, you will configure your device by transferring files a
 
 ```
 # Step 1: Unzip the connection kit on the device
-cd iot
+cd /home/pi/Iot_EdgeComputing/src
 mkdir connect_device
 unzip connect_device_package.zip -d connect_device
 
@@ -62,23 +62,11 @@ chmod +x start.sh
 
 # Waiting for messages from your device
   '''
-  Received a new message: 
-  {"message": "Hello World!", "sequence": 681} 
-  from topic: 
+  Received a new message:
+  {"message": "Hello World!", "sequence": 681}
+  from topic:
   sdk/test/Python
   '''
 
 
 ```
-
-
-### 3. AWS IoT Greengrass 
-AWS IoT Greengrass lets your devices process the data they generate locally, while still taking advantage of AWS services when an internet connection is available.  
-[Doc](https://eu-central-1.console.aws.amazon.com/iot/home?region=eu-central-1#/greengrassIntro)
- * A series of clicks 
-   * Create a Group
-   * Easy Group creation (recommended)
-   * Name your Group: mine is 'PE'
-   * Next  
-   * Download tar.gz file
-
