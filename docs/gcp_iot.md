@@ -32,7 +32,8 @@ gcloud components update
 gcloud projects create pineapples
 gcloud config set project pineapples
  ```
- 
+ <br>
+  
 ### Enable Billing
  * [Go to Project List Page](https://console.developers.google.com/cloud-resource-manager?previousPage=%2Fbilling%2Fenable%3Fproject%3Dpines1%26pli%3D1)
  * Select Project and click the 'Three dots' on the right  => Billing => Link to your billing account  
@@ -48,12 +49,19 @@ gcloud config set project pineapples
 <br>
    
 ### Enable Pub/Sub dashboard API
-  *[Pub/Sub](https://console.cloud.google.com/cloudpubsub/enableApi?project=pineapples&folder&organizationId)
+  * [Pub/Sub](https://console.cloud.google.com/cloudpubsub/enableApi?project=pineapples&folder&organizationId)
   * Create a topic: iot 
   * Function: real-time messaging, ingesting device telemetry 
   
  <br>
-  
+
+### Allow IoT Core to send messages to Pub/Sub
+ ```
+ gcloud projects add-iam-policy-binding pineapples --member=serviceAccount:cloud-iot@system.gserviceaccount.com --role=roles/pubsub.publisher
+ ```
+
+ <br>
+   
 ### Register a device
   * [Create a device registry](https://console.cloud.google.com/iot/registries?project=pines1)
   * Registry ID: pineapple1
@@ -61,13 +69,6 @@ gcloud config set project pineapples
   * Protocol: MQTT, HTTP
   * Cloud Pub/Sub Topic: projects/pineapples/topics/iot
   
- <br>
-
-### Allow IoT Core to send messages to Pub/Sub
- ```
- gcloud projects add-iam-policy-binding pines1 --member=serviceAccount:cloud-iot@system.gserviceaccount.com --role=roles/pubsub.publisher
- ```
- 
  <br>
  
  ---
@@ -79,7 +80,4 @@ gcloud config set project pineapples
   * [Preparing Google Cloud IoT Core to Receive Messages](http://www.opensourcerers.org/connecting-iot-sensor-to-google-cloud-iot-core/)
   * [Raspberry Pi with Google IOT Core, PubSub, Cloud Functions and Firestore](https://my-bigdata-blog.blogspot.com/2019/02/raspberry-pi-with-google-iot-core-functions-firestore-bigquery.html)
   * [Cloud IoT Edge alpha versionI](https://cloud.google.com/iot-edge/)
-
-
-### Android of Things
-  * [Raspberry Pi 3](https://developer.android.com/things/hardware/raspberrypi )
+  * [Android of Things](https://developer.android.com/things/hardware/raspberrypi )
