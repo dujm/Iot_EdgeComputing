@@ -2,6 +2,7 @@
 title: Connect to Google IoT
 ---
 
+
 ####  [Project Page](https://dujm.github.io/Iot_EdgeComputing/index)&nbsp;  | &nbsp;   [AWS IoT Setup](https://dujm.github.io/Iot_EdgeComputing/aws_iot)&nbsp;  | &nbsp;   [GCP IoT Setup](https://dujm.github.io/Iot_EdgeComputing/gcp_iot)
 
 
@@ -18,61 +19,80 @@ source activate pineapple
 <br>
 
 ### 2. Setup GCloud IoT Core
+### 2.1 GCloud setup
 
-  * Log in
- ```
+```
+# Log in 
 gcloud auth login
- ```
-  * Update GCloud components
- ```  
+
+# Update GCloud components
 gcloud components update
- ```
-  * Create and set a new project 
- ```  
+
+# Create and set a new project 
 gcloud projects create pineapples
+
+# Set to the new project
 gcloud config set project pineapples
  ```
+ 
  <br>
-  
-### Enable Billing
+   
+### 2.2 Enable Billing
  * [Go to Project List Page](https://console.developers.google.com/cloud-resource-manager?previousPage=%2Fbilling%2Fenable%3Fproject%3Dpines1%26pli%3D1)
  * Select Project and click the 'Three dots' on the right  => Billing => Link to your billing account  
  
  <br>
   
-### Enable Google Cloud IoT API
+### 2.3 Enable Google Cloud IoT API
   * [Cloud IoT Core](https://cloud.google.com/iot-core/?refresh=1)
-  * Click 'View Console' [https://console.cloud.google.com/iot?refresh=1&_ga=2.104796928.-1458619743.1555602826]
+  * [Click 'View Console'] (https://console.cloud.google.com/iot?refresh=1&_ga=2.104796928.-1458619743.1555602826)
   * Enable API 
   * Function: managing gateways and devices
 
 <br>
    
-### Enable Pub/Sub dashboard API
+### 2.4 Enable Pub/Sub dashboard API
   * [Pub/Sub](https://console.cloud.google.com/cloudpubsub/enableApi?project=pineapples&folder&organizationId)
   * Create a topic: iot 
   * Function: real-time messaging, ingesting device telemetry 
   
  <br>
 
-### Allow IoT Core to send messages to Pub/Sub
+### 2.5 Allow IoT Core to send messages to Pub/Sub
  ```
  gcloud projects add-iam-policy-binding pineapples --member=serviceAccount:cloud-iot@system.gserviceaccount.com --role=roles/pubsub.publisher
  ```
 
  <br>
    
-### Register a device
-  * [Create a device registry](https://console.cloud.google.com/iot/registries?project=pines1)
+### 3. Register a device
+### 3.1 Create a device registry
+  * [Registry](https://console.cloud.google.com/iot/registries?project=pineapples)
   * Registry ID: pineapple1
   * Region: europe-west1
   * Protocol: MQTT, HTTP
   * Cloud Pub/Sub Topic: projects/pineapples/topics/iot
   
  <br>
- 
- ---
-### Reference
+
+### 3.2 Set up the RPI as a device
+```
+cd Iot_EdgeComputing/src
+# Clone the GCP community repo
+git clone https://github.com/GoogleCloudPlatform/community.git
+
+# Install Python dependencies
+sudo rm -r community/.git
+cd community/tutorials/cloud-iot-gateways-rpi
+pip install -r requirements-pi.txt 
+
+# Export environment dependencies to yml
+conda env export > ~/Documents/Iot_EdgeComputing/conda_env/pineapples_iot_rpi_device.yml
+
+
+```
+---
+### References
   * [Using Cloud IoT Core gateways with a Raspberry Pi](https://cloud.google.com/community/tutorials/cloud-iot-gateways-rpi)
   * [Google Cloud Doc](https://cloud.google.com/docs/?refresh=1)
   * [Overview of Internet of Things](https://cloud.google.com/solutions/iot-overview?refresh=1)
