@@ -3,11 +3,15 @@ title: How to setup the
 ---
 
 
-# setup the offical camera modules
-sudo modprobe bcm2835-v4l2 .
+### 1. Setup the offical camera modules
+```
+sudo modprobe bcm2835-v4l2 
+```
 
+<br>
 
-# Set up a usb cam 
+### 2.Set up a usb web cam
+```
 sudo apt-get install motion -y
 lsusb
 lsmod | grep uvc
@@ -48,7 +52,18 @@ Password:
 . ok 
 
 '''
+```
+
+```
+# Start motion service
+sudo service motion start
+sudo service motion stop
+sudo service motion status
+
+```
 
 ---
 ### References
-[How to setup a Raspberry Pi Camera](https://tutorials-raspberrypi.com/raspberry-pi-security-camera-livestream-setup/)
+
+ * [Raspberry Pi Camera and Motion out of the box – Sparrowcam](http://www.richardmudhar.com/blog/2015/02/raspberry-pi-camera-and-motion-out-of-the-box-sparrowcam/)
+ * [How to setup a Raspberry Pi Camera](https://tutorials-raspberrypi.com/raspberry-pi-security-camera-livestream-setup/)
