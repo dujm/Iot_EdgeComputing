@@ -9,16 +9,16 @@ title: How to setup a Raspberry Pi camera
 ### 1. Set up a usb web cam for taking photos
 
 ```
-# Install the fswebcam package
+# 1. Install the fswebcam package
 sudo apt-get install 
 
-#Add your user to video group
+# 2. Add your user to video group
 sudo usermod -a -G video pi
 
-# Basic usage to take a photo
+# 3. Basic usage to take a photo
 fswebcam image.jpg
 
-# If you are using an old camera and get black imagaes, skip the first 20 frames
+# 4. If you are using an old camera and get black imagaes, skip the first 20 frames
 fswebcam -S 20 2image.jpg
 ```
 
@@ -26,13 +26,13 @@ fswebcam -S 20 2image.jpg
 
 ### 2.Set up a usb web cam for video streaming
 ```
-# Install the Motion tool
+# 1. Install the Motion tool
 sudo apt-get install motion -y
 
-# Check if a usb camera can be detected
+# 2. Check if a usb camera can be detected
 lsusb
 
-# Display all connected videodevices/cameras
+# 3. Display all connected videodevices/cameras
 ls /dev/video*
 lsmod | grep uvc
 sudo modprobe uvcvideo
@@ -40,8 +40,9 @@ sudo modprobe /dev/video0
 
 v4l2-ctl --all
 
-# Check cameral details
+# 4. Check cameral details
 v4l2-ctl -V
+
 '''
 Format Video Capture:
         Width/Height  : 640/480
@@ -52,15 +53,11 @@ Format Video Capture:
         Colorspace    : SRGB
         Flags         :
 '''
-```
-```
-# Edit Motion’s configuration file
+
+# 4. Edit Motion’s configuration file
 sudo nano /etc/motion/motion.conf
-```
 
-
-```
-
+# 5. Enable motion service
 /etc/init.d/motion stop && fswebcam && /etc/init.d/motion start
 '''
 [....] Stopping motion (via systemctl): motion.service==== AUTHENTICATING FOR org.freedesktop.systemd1.manage-units ===
@@ -92,10 +89,8 @@ Password:
 . ok 
 
 '''
-```
 
-```
-# Start motion service
+# 6. Start motion service
 sudo service motion start
 sudo service motion stop
 sudo service motion status
@@ -103,8 +98,7 @@ sudo service motion status
 ```
 ### 3. Install video player
 ```
-# 
-# mplayer and VLC player did not work well
+# 0 Note: mplayer and VLC player did not work well
 
 # Install omxplayer
 sudo apt-get install omxplayer
@@ -129,10 +123,7 @@ Left Seek -30
 Right Seek +30
 Down Seek -600
 Up Seek +600
-
-
 '''
-
 ```
 
 ---
