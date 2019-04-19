@@ -152,7 +152,6 @@ cgroup_enable=memory cgroup_memory=1
 # Reboot the RPI
 sudo reboot
 
-
 # 6. Run the Greengrass dependency checker
 cd /home/pi/Iot_EdgeComputing/src/conda_env/conda_aws
 
@@ -171,8 +170,9 @@ sudo ./check_ggc_dependencies | more
 <br>
 
 #### 4.2 Module 2: Installing the Greengrass Core Software
-```
 [Doc](https://docs.aws.amazon.com/greengrass/latest/developerguide/gg-device-start.html)
+
+```
 # 1. Sign in to the AWS Management Console
 https://console.aws.amazon.com/
 
@@ -182,8 +182,8 @@ https://console.aws.amazon.com/
 # Name pinenuts
 
 # 3. Download the pipi_core resources as tar.gz to ./Iot_EdgeComputing/src/conda_env/conda_aws
-# 4. Download a root CA for AWS IoT
-# 5. Download the current Greengrass Core software
+
+# 4. Download the current Greengrass Core software
 # https://docs.aws.amazon.com/greengrass/latest/developerguide/what-is-gg.html?icmpid=docs_gg_console#gg-core-download-tab
 # For RPI: choose ARMv7l
 
@@ -203,7 +203,6 @@ sudo wget -O root.ca.pem https://www.amazontrust.com/repository/AmazonRootCA1.pe
 
 # Check the root.ca.pem file, if it's empty, re-run the above wget line 
 
-
 # 8. Start AWS IoT Greengrass on your core device
 cd /greengrass/ggc/core/
 sudo ./greengrassd start
@@ -216,7 +215,8 @@ Waiting for up to 40s for Daemon to start
 
 Greengrass successfully started with PID: 1130
 '''
-# Confirm that the AWS IoT Greengrass core software (daemon) is functioning
+
+# 9. Confirm that the AWS IoT Greengrass core software (daemon) is functioning
 ps aux | grep 1130
 
 ```
@@ -231,8 +231,7 @@ ps aux | grep 1130
 --- 
 ### Errors
 ```
-# Error: AWS Greengrass detected insecure OS configuration: No hardlink/softlink protection enabled.
-cd /etc/sysctl.d
-ls
-vim 98-rpi.conf
+# Error 1: AWS Greengrass detected insecure OS configuration: No hardlink/softlink protection enabled.
+ * Reason: Hardlink and softlink protection on the operating system at start up are not enabled
+
 ```
