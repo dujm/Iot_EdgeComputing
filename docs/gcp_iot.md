@@ -6,7 +6,7 @@ title: Connect to Google IoT
 ####  [Project Page](https://dujm.github.io/Iot_EdgeComputing/index)&nbsp;  | &nbsp;   [AWS IoT Setup](https://dujm.github.io/Iot_EdgeComputing/aws_iot)&nbsp;  | &nbsp;   [GCP IoT Setup](https://dujm.github.io/Iot_EdgeComputing/gcp_iot)&nbsp;  | &nbsp; [Device: Camera Setup](https://dujm.github.io/Iot_EdgeComputing/device_cam)
 
 
-###1. Set Up a conda Python environment in RPI  
+### 1. Set Up a conda Python environment in RPI  
 
 ```
 cd Iot_EdgeComputing/conda_env 
