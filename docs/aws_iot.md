@@ -46,7 +46,6 @@ OpenSSL 1.0.2r  26 Feb 2019
 # If the OpenSSL version is < 1.0.1, update OpenSSL for
 your distribution
 sudo apt-get update openssl
-
 ```
 
 <br>
@@ -56,7 +55,7 @@ sudo apt-get update openssl
 #### 3.1 Register a device
   * Choose Linux/OS
   * Choose Python
-  * [Doc:Connect to AWS IoT](https://eu-central-1.console.aws.amazon.com/iot/home?region=eu-central-1#/connectdevice/)
+  * [Doc](https://eu-central-1.console.aws.amazon.com/iot/home?region=eu-central-1#/connectdevice/)
 
 <br>
 
@@ -164,7 +163,6 @@ unzip greengrass-dependency-checker-GGCv1.8.x.zip
 cd greengrass-dependency-checker-GGCv1.8.x
 sudo modprobe configs
 sudo ./check_ggc_dependencies | more
-
 ```
 
 <br>
@@ -218,7 +216,6 @@ Greengrass successfully started with PID: 1130
 
 # 9. Confirm that the AWS IoT Greengrass core software (daemon) is functioning
 ps aux | grep 1130
-
 ```
 
 <br>
@@ -233,5 +230,4 @@ ps aux | grep 1130
 ```
 # Error 1: AWS Greengrass detected insecure OS configuration: No hardlink/softlink protection enabled.
  * Reason: Hardlink and softlink protection on the operating system at start up are not enabled
-
 ```
