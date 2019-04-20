@@ -14,6 +14,7 @@ title: AWS Machine Learning Interface
  * A Greengrass group and a Greengrass core
  
 ### 1. Configure the Raspberry Pi
+```
 sudo apt-get install -y python-dev python-setuptools python-pip python-picamera
 
 sudo reboot
@@ -22,6 +23,9 @@ sudo raspi-config
 
 # Test the camera
 raspistill -v -o test.jpg
+```
+
+<br>
 
 ### 2. Install the Apache MXNet Framework
 [
@@ -62,6 +66,8 @@ sudo zip -r squeezenet.zip squeezenet_v1.1-symbol.json squeezenet_v1.1-0000.para
 
 ### 6. Add Resources to the Greengrass Group
  * bucket: greengrass-bucket-pinenuts
+ * interface 
+ 
  <img src='assets/6_ggObjectClassfication.png' alt='drawing' width='600' />
 
 <br>
@@ -70,5 +76,8 @@ sudo zip -r squeezenet.zip squeezenet_v1.1-symbol.json squeezenet_v1.1-0000.para
 
 ### 8. Deploy the Greengrass Group
 
-###9. Configuring an NVIDIA Jetson TX2
+### 9. Configuring an NVIDIA Jetson TX2
 [Doc](https://docs.aws.amazon.com/greengrass/latest/developerguide/ml-console.html)
+
+<br>
+---
