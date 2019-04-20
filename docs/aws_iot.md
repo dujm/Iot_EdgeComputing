@@ -3,18 +3,18 @@ title: Connect to AWS IoT
 ---
 
 
-####  [Project Page](https://dujm.github.io/Iot_EdgeComputing/index)&nbsp;  | &nbsp;   [AWS IoT Setup](https://dujm.github.io/Iot_EdgeComputing/aws_iot)&nbsp;  | &nbsp;   [GCP IoT Setup](https://dujm.github.io/Iot_EdgeComputing/gcp_iot)&nbsp;  | &nbsp; [Device: Camera Setup](https://dujm.github.io/Iot_EdgeComputing/device_cam)
+####  [Project Page](https://dujm.github.io/Iot_EdgeComputing/index)&nbsp;  | &nbsp;   [AWS IoT Setup](https://dujm.github.io/Iot_EdgeComputing/aws_iot)&nbsp;  | &nbsp;   [AWS IoT Greengrass Setup](https://dujm.github.io/Iot_EdgeComputing/aws_iot_greengrass)&nbsp;  | &nbsp;   [AWS Machine Learning Interface](https://dujm.github.io/Iot_EdgeComputing/aws_ml)&nbsp;  | &nbsp;[GCP IoT Setup](https://dujm.github.io/Iot_EdgeComputing/gcp_iot)&nbsp;  | &nbsp; [Device: Camera Setup](https://dujm.github.io/Iot_EdgeComputing/device_cam)
 
+<br>
 
-
-### 1. Prepare RPI  
+#### 1. Prepare RPI  
 ```
 # 1.1 Get the model of your RPI, RPI3B or B+ are  needed
 cat /proc/cpuinfo
 
 # 1.2 Determine the architecture of your RPI
-uname -m 
-# The result must be greater than or equal to armv71 
+uname -m
+# The result must be greater than or equal to armv71
 
 # 1.3 Set up RPI
 https://docs.aws.amazon.com/greengrass/latest/developerguide/module1.html
