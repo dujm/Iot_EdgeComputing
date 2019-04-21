@@ -1,39 +1,61 @@
 ---
-title: How to setup a Raspberry Pi camera
+title: Setup Raspberry Pi cameras
 ---
 
 
-####  [Project Page](https://dujm.github.io/Iot_EdgeComputing/index)&nbsp;  | &nbsp;   [AWS IoT Setup](https://dujm.github.io/Iot_EdgeComputing/aws_iot)&nbsp;  | &nbsp;   [AWS IoT Greengrass Setup](https://dujm.github.io/Iot_EdgeComputing/aws_iot_greengrass)&nbsp;  | &nbsp;   [AWS Machine Learning Interface](https://dujm.github.io/Iot_EdgeComputing/aws_ml)&nbsp;  | &nbsp;[GCP IoT Setup](https://dujm.github.io/Iot_EdgeComputing/gcp_iot)&nbsp;  | &nbsp; [Device: Camera Setup](https://dujm.github.io/Iot_EdgeComputing/device_cam)
+####  [AWS IoT Setup](https://dujm.github.io/Iot_EdgeComputing/aws_iot)&nbsp;  | &nbsp;   [AWS IoT Greengrass Setup](https://dujm.github.io/Iot_EdgeComputing/aws_iot_greengrass)&nbsp;  | &nbsp;   [AWS Machine Learning Interface](https://dujm.github.io/Iot_EdgeComputing/aws_ml)
 
+#### [AWS SDK Setup](https://dujm.github.io/Iot_EdgeComputing/aws_sdk_cli)&nbsp;  | &nbsp; [AWS SDK Rekognition](https://dujm.github.io/Iot_EdgeComputing/aws_sdk_reko)
 
+#### [GCP IoT Setup](https://dujm.github.io/Iot_EdgeComputing/gcp_iot)
 
-### 1. Set up a usb web cam for taking photos
+#### [GCP SDK Setup](https://dujm.github.io/Iot_EdgeComputing/gcp_sdk)
+
+#### [Device: Camera Setup](https://dujm.github.io/Iot_EdgeComputing/device_cam)
+
+<br>
+
+### 1. Set up a RPI camera
 
 ```
-# 1. Install the fswebcam package
-sudo apt-get install 
+# Install packages
+pip3 install guizero
+pip3 install twython
+sudo apt-get install -y raspberrypi-ui-mods
+sudo apt-get install -y raspberrypi-net-mods
 
-# 2. Add your user to video group
+# Take a photo
+raspistill -o cam.jpg
+```
+
+
+### 3. Set up a usb web cam for taking photos
+
+```
+# 1) Install the fswebcam package
+sudo apt-get install fswebcam
+
+# 2) Add your user to video group
 sudo usermod -a -G video pi
 
-# 3. Basic usage to take a photo
+# 3) Basic usage to take a photo
 fswebcam image.jpg
 
-# 4. If you are using an old camera and get black imagaes, skip the first 20 frames
+# 4) If you are using an old camera and get black imagaes, skip the first 20 frames
 fswebcam -S 20 2image.jpg
 ```
 
 <br> 
 
-### 2.Set up a usb web cam for video streaming
+### 4.Set up a usb web cam for video streaming
 ```
-# 1. Install the Motion tool
+# 1) Install the Motion tool
 sudo apt-get install motion -y
 
-# 2. Check if a usb camera can be detected
+# 2) Check if a usb camera can be detected
 lsusb
 
-# 3. Display all connected videodevices/cameras
+# 3) Display all connected videodevices/cameras
 ls /dev/video*
 lsmod | grep uvc
 sudo modprobe uvcvideo
@@ -41,7 +63,7 @@ sudo modprobe /dev/video0
 
 v4l2-ctl --all
 
-# 4. Check cameral details
+# 4) Check cameral details
 v4l2-ctl -V
 
 '''
@@ -55,10 +77,10 @@ Format Video Capture:
         Flags         :
 '''
 
-# 4. Edit Motion’s configuration file
+# 5) Edit Motion’s configuration file
 sudo nano /etc/motion/motion.conf
 
-# 5. Enable motion service
+# 6) Enable motion service
 /etc/init.d/motion stop && fswebcam && /etc/init.d/motion start
 '''
 [....] Stopping motion (via systemctl): motion.service==== AUTHENTICATING FOR org.freedesktop.systemd1.manage-units ===
@@ -91,15 +113,15 @@ Password:
 
 '''
 
-# 6. Start motion service
+# 7) Start motion service
 sudo service motion start
 sudo service motion stop
 sudo service motion status
 
 ```
-### 3. Install video player
+### 5. Install video player
 ```
-# 0 Note: mplayer and VLC player did not work well
+# Note: mplayer and VLC player did not work well
 
 # Install omxplayer
 sudo apt-get install omxplayer

@@ -1,5 +1,5 @@
 ---
-title: AWS SDK
+title: AWS SDK Setup
 ---
 
 
