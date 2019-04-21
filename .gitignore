@@ -97,3 +97,4 @@ Download
 *.pem
 *.key
 *.private.key
+*draft.md
