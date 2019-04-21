@@ -1,0 +1,5 @@
+,Confidence,Instances,Name,Parents
+0,99.9062271118164,[],Plant,[]
+1,99.9062271118164,[],Tree,[{'Name': 'Plant'}]
+2,99.32076263427734,[],Pine,"[{'Name': 'Plant'}, {'Name': 'Tree'}]"
+3,97.8804702758789,[],Conifer,"[{'Name': 'Plant'}, {'Name': 'Tree'}]"
