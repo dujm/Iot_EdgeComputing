@@ -5,7 +5,7 @@ title: AWS SDK
 
 ####  [AWS IoT Setup](https://dujm.github.io/Iot_EdgeComputing/aws_iot)&nbsp;  | &nbsp;   [AWS IoT Greengrass Setup](https://dujm.github.io/Iot_EdgeComputing/aws_iot_greengrass)&nbsp;  | &nbsp;   [AWS Machine Learning Interface](https://dujm.github.io/Iot_EdgeComputing/aws_ml)
 
-#### [AWS SDK](https://dujm.github.io/Iot_EdgeComputing/aws_sdk_cli)&nbsp;  | &nbsp; [AWS SDK Rekognition](https://dujm.github.io/Iot_EdgeComputing/aws_sdk_reko)
+#### [AWS SDK Setup](https://dujm.github.io/Iot_EdgeComputing/aws_sdk_cli)&nbsp;  | &nbsp; [AWS SDK Rekognition](https://dujm.github.io/Iot_EdgeComputing/aws_sdk_reko)
 
 #### [GCP IoT Setup](https://dujm.github.io/Iot_EdgeComputing/gcp_iot)
 
@@ -31,7 +31,7 @@ complete -C aws_completer aws
 
 <br>
 
-### 2. Setup Security credentials
+### 2. Setup Security Credentials
 
 [Security_credentials](
 https://console.aws.amazon.com/iam/home?region=eu-west-1#/security_credentials) 
