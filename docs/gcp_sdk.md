@@ -46,20 +46,14 @@ gcloud init
  ```
  
 ### 4. Authorizing Cloud SDK tools
+
+[Authorizing a service accounts](https://cloud.google.com/sdk/docs/authorizing)  
+
  ```
 gloud auth login
 gcloud auth application-default login
-[Authorizing a service account?](https://cloud.google.com/sdk/docs/authorizing)
-
 gcloud auth list
- ```
-
-### 5. [Add members](https://console.cloud.google.com/cloud-resource-manager?_ga=2.63823599.-1312817518.1554382349)
-
-
-### 6. Errors
- * ModuleNotFoundError: No module named 'google'
- pip install --upgrade google-api-python-client
+ ```  
  
- * ModuleNotFoundError: No module named 'google.cloud'
+
 

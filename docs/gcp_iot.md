@@ -54,7 +54,7 @@ gcloud config set project pineapples
   
 ### 2.3 Enable Google Cloud IoT API
   * [Cloud IoT Core](https://cloud.google.com/iot-core/?refresh=1)
-  * [Click 'View Console'] (https://console.cloud.google.com/iot?refresh=1&_ga=2.104796928.-1458619743.1555602826)
+  * View Console
   * Enable API 
   * Function: managing gateways and devices
 
@@ -97,8 +97,6 @@ pip install -r requirements-pi.txt
 
 # Export environment dependencies to yml
 conda env export > ~/Documents/Iot_EdgeComputing/conda_env/pineapples_iot_rpi_device.yml
-
-
 ```
 ---
 ### References
