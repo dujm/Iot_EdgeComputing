@@ -18,9 +18,11 @@ pyasn1==0.4.5
 pyparsing==2.4.0
 python-dateutil==2.8.0
 pytz==2018.5
-PyYAML==3.13
 rsa==3.4.2
 s3transfer==0.2.0
 six==1.12.0
 sqlparse==0.3.0
 urllib3==1.24.2
+
+# PyYAML==3.13 
+# High severity alert by github
