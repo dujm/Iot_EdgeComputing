@@ -3,9 +3,9 @@ title: AWS SDK
 ---
 
 
-####  [AWS IoT Setup](https://dujm.github.io/Iot_EdgeComputing/aws_iot)&nbsp;  | &nbsp;   [AWS IoT Greengrass Setup](https://dujm.github.io/Iot_EdgeComputing/aws_iot_greengrass)&nbsp;  | &nbsp;   [AWS Machine Learning Interface](https://dujm.github.io/Iot_EdgeComputing/aws_ml)&nbsp;  | &nbsp; AWS SDK](https://dujm.github.io/Iot_EdgeComputing/aws_sdk_cli)&nbsp;  | &nbsp; AWS SDK Rekognition](https://dujm.github.io/Iot_EdgeComputing/aws_sdk_reko)
+####  [AWS IoT Setup](https://dujm.github.io/Iot_EdgeComputing/aws_iot)&nbsp;  | &nbsp;   [AWS IoT Greengrass Setup](https://dujm.github.io/Iot_EdgeComputing/aws_iot_greengrass)&nbsp;  | &nbsp;   [AWS Machine Learning Interface](https://dujm.github.io/Iot_EdgeComputing/aws_ml)&nbsp;  | &nbsp; [AWS SDK](https://dujm.github.io/Iot_EdgeComputing/aws_sdk_cli)&nbsp;  | &nbsp; [AWS SDK Rekognition](https://dujm.github.io/Iot_EdgeComputing/aws_sdk_reko)
 
-#### [GCP IoT Setup](https://dujm.github.io/Iot_EdgeComputing/gcp_iot)&nbsp;  | &nbsp; 
+#### [GCP IoT Setup](https://dujm.github.io/Iot_EdgeComputing/gcp_iot)&nbsp
 
 #### [Device: Camera Setup](https://dujm.github.io/Iot_EdgeComputing/device_cam)
 
@@ -73,8 +73,7 @@ aws s3 cp myfolder s3://greengrass-bucket-pinenuts --recursive
 
 ### 4. Use AWS SDK in Python (Boto3 package)
 
-[Boto 3](https://bo
-to3.amazonaws.com/v1/documentation/api/latest/guide/quickstart.html#installation)
+[Boto 3](https://boto3.amazonaws.com/v1/documentation/api/latest/guide/quickstart.html#installation)
 
 ```
 # Install boto3
