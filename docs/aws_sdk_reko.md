@@ -24,6 +24,7 @@ title: AWS SDK Rekognition
 
 
 ### 1. Image recognition using AWS CLI
+
 ```
 # 1. Example in the tutorial:
 aws rekognition detect-labels --image "S3Object={Bucket=console-sample-images-dub,Name=skateboard.jpg}" --region eu-west-1
@@ -36,7 +37,9 @@ aws rekognition detect-labels \
   --image "{\"S3Object\":{\"Bucket\":\"pinenutswest\",\"Name\":\"pines.jpeg\"}}" \
   --region eu-west-1 \
   > prediction.json
-  
+```
+
+```
 # Result  
 '''
 {
