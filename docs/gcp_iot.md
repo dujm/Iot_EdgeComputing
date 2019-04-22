@@ -106,5 +106,5 @@ conda env export > ~/Documents/Iot_EdgeComputing/conda_env/pineapples_iot_rpi_de
   * [Google Apps Script API](https://developers.google.com/apps-script/api/)
   * [Preparing Google Cloud IoT Core to Receive Messages](http://www.opensourcerers.org/connecting-iot-sensor-to-google-cloud-iot-core/)
   * [Raspberry Pi with Google IOT Core, PubSub, Cloud Functions and Firestore](https://my-bigdata-blog.blogspot.com/2019/02/raspberry-pi-with-google-iot-core-functions-firestore-bigquery.html)
-  * [Cloud IoT Edge alpha versionI](https://cloud.google.com/iot-edge/)
+  * [Cloud IoT Edge alpha version](https://cloud.google.com/iot-edge/)
   * [Android of Things](https://developer.android.com/things/hardware/raspberrypi )

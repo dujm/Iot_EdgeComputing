@@ -354,7 +354,7 @@ os.chdir('..')
 ### Installation of packages used  in this tutorial
 ```
 python -mpip install matplotlib
-conda install pandas
 pip install image
+conda install pandas
 conda install -y -c conda-forge opencv
 ```

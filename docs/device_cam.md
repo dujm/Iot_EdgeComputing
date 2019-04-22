@@ -28,6 +28,7 @@ sudo apt-get install -y raspberrypi-net-mods
 raspistill -o cam.jpg
 ```
 
+<br>
 
 ### 3. Set up a usb web cam for taking photos
 
@@ -47,7 +48,7 @@ fswebcam -S 20 2image.jpg
 
 <br> 
 
-### 4.Set up a usb web cam for video streaming
+### 4. Set up a usb web cam for video streaming
 ```
 # 1) Install the Motion tool
 sudo apt-get install motion -y
