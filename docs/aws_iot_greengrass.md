@@ -300,22 +300,29 @@ A subscription consists of a source, target, and topic.
  * The topic allows you to filter the data that is sent from the source to the target.
  * The source or target can be a Greengrass device, Lambda function, connector, device shadow, or AWS IoT.
 
-#### 2. What is swap memory? 
+#### 2. What is virtual memory?
+Virtual memory is a combination of RAM and disk space that running processes can use.
+
+#### What is swap memory? 
 Swap space is the portion of virtual memory that is on the hard disk, used when RAM is full
 
 
 #### How increase swap memory?
 ```
-# increase swap memory
+# Increase swap memory
 sudo /bin/dd if=/dev/zero of=/var/swap.1 bs=1M count=1024
 sudo /sbin/mkswap /var/swap.1
 sudo chmod 600 /var/swap.1
 sudo /sbin/swapon /var/swap.1
 
-# remove the temporary swap memory
+# Remove the temporary swap memory
 sudo swapoff /var/swap.1
 sudo rm /var/swap.1
+
+# Check virtual memory statistics
+vmstat 
+# si: amount of memory swapped in from disks
+# so: amount of memory swapped out from disks
 ```
-#### What is virtual memory?
-Virtual memory is a combination of RAM and disk space that running processes can use.
+
 
