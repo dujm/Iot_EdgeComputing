@@ -16,10 +16,10 @@ title: AWS Machine Learning Interface
 <br>
 
 ### 0. Prerequisites
-[Doc](https://docs.aws.amazon.com/greengrass/latest/developerguide/ml-console.html)
  * Raspberry Pi 3 Model B+ or Model B
  * Raspberry Pi Camera Module V2 - 8 Megapixel, 1080p
  * A Greengrass group and a Greengrass core
+ * [Doc](https://docs.aws.amazon.com/greengrass/latest/developerguide/ml-console.html)
 
 <br>
 
