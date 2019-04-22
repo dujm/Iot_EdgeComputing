@@ -17,13 +17,13 @@ title: AWS IoT Greengrass Image Classification Connector
 
 ###  0. Prerequisites
  * Hardware: 
-  * Raspberry Pi 3 Model B
-  * Raspberry Pi Camera Module V2 – 8 Megapixel, 1080p
+   * Raspberry Pi 3 Model B
+   * Raspberry Pi Camera Module V2 – 8 Megapixel, 1080p
  * Software: 
-  * A Greengrass group deployed to your Raspberry Pi that is running AWS IoT Greengrass Core v1.7.0. 
-  * Your Greengrass group has an IAM group role, at minimum:  
-   * the AWSGreengrassResourceAccessRolePolicy  
-   * AWSGreengrassFullAccess policies attached
+   * A Greengrass group deployed to your Raspberry Pi that is running AWS IoT Greengrass Core v1.7.0. 
+   * Your Greengrass group has an IAM group role, at minimum:  
+    * the AWSGreengrassResourceAccessRolePolicy  
+    * AWSGreengrassFullAccess policies attached
   * [Getting Started with AWS IoT Greengrass](https://docs.aws.amazon.com/greengrass/latest/developerguide/gg-gs.html)
 
 <br>
@@ -51,8 +51,7 @@ sudo bash armv71.sh
 
 ---
 ### Errors
-1. # E: Unmet dependencies
-
+1. Unmet dependencies
 ```
 sudo apt --fix-broken install
 ```
