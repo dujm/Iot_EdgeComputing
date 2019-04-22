@@ -310,10 +310,17 @@ Swap space is the portion of virtual memory that is on the hard disk, used when 
 #### How increase swap memory?
 ```
 # Increase swap memory
+# 1) 
 sudo /bin/dd if=/dev/zero of=/var/swap.1 bs=1M count=1024
 sudo /sbin/mkswap /var/swap.1
 sudo chmod 600 /var/swap.1
 sudo /sbin/swapon /var/swap.1
+
+# 2) 
+sudo vim /etc/dphys-swapfile
+# Change CONF_SWAPSIZE = 1000
+/etc/init.d/dphys-swapfile restart
+
 
 # Remove the temporary swap memory
 sudo swapoff /var/swap.1
