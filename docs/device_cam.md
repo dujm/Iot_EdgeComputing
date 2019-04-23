@@ -15,17 +15,64 @@ title: Setup Raspberry Pi cameras
 
 <br>
 
-### 1. Set up a RPI camera
+### 0. Install a video player 'omxplayer'
+
+```
+# Install omxplayer
+sudo apt-get install omxplayer
+
+# Key bindings
+'''
+ Increase Speed
+2 Decrease Speed
+j Previous Audio stream
+k Next Audio stream
+i Previous Chapter
+o Next Chapter
+n Previous Subtitle stream
+m Next Subtitle stream
+s Toggle subtitles
+q Exit
+Space or p Pause/Resume
+– Decrease Volume
++ Increase Volume
+Left Seek -30
+Right Seek +30
+Down Seek -600
+Up Seek +600
+'''
+
+# Note: mplayer and VLC player did not work well
+```
+
+<br>
+
+### 1. Set up a picamera taking photos
 
 ```
 # Install packages
-pip3 install guizero
-pip3 install twython
+pip install picamera
+pip install guizero
+pip install twython
 sudo apt-get install -y raspberrypi-ui-mods
 sudo apt-get install -y raspberrypi-net-mods
 
 # Take a photo
+cd Iot_EdgeComputing/src/device/picamera
 raspistill -o cam.jpg
+```
+
+<br>
+
+### 2. Set up a picamera for capturing videos
+
+```
+# Take a 10s video
+cd Iot_EdgeComputing/src/device/picamera
+raspivid -o pipi.h264 -t 10000
+
+# Play the video 
+omxplayer pipi.h264 
 ```
 
 <br>
@@ -119,36 +166,10 @@ sudo service motion start
 sudo service motion stop
 sudo service motion status
 
-```
-### 5. Install video player
-```
-# Note: mplayer and VLC player did not work well
-
-# Install omxplayer
-sudo apt-get install omxplayer
+# 8) Play the video
 omxplayer /home/pi/Monitor/01-20190419104218.avi
-
-# Key bindings
-'''
- Increase Speed
-2 Decrease Speed
-j Previous Audio stream
-k Next Audio stream
-i Previous Chapter
-o Next Chapter
-n Previous Subtitle stream
-m Next Subtitle stream
-s Toggle subtitles
-q Exit
-Space or p Pause/Resume
-– Decrease Volume
-+ Increase Volume
-Left Seek -30
-Right Seek +30
-Down Seek -600
-Up Seek +600
-'''
 ```
+
 
 ---
 ### References
