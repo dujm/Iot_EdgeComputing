@@ -49,17 +49,21 @@ Up Seek +600
 
 ### 1. Set up a picamera taking photos
 
+ * [Connect picamera with the Raspberry Pi](https://thepihut.com/blogs/raspberry-pi-tutorials/16021420-how-to-install-use-the-raspberry-pi-camera)
+
+ * [Raspberry Pi Camera Module Doc](https://www.raspberrypi.org/documentation/raspbian/applications/camera.md)  
+
 ```
-# Install packages
-pip install picamera
-pip install guizero
-pip install twython
-sudo apt-get install -y raspberrypi-ui-mods
-sudo apt-get install -y raspberrypi-net-mods
+# Set up
+sudo apt-get update
+sudo apt-get upgrade
+sudo raspi-config
+'''Use the cursor keys to move to the camera option, and select 'enable'. '''
+sudo reboot
 
 # Take a photo
 cd Iot_EdgeComputing/src/device/picamera
-raspistill -o cam.jpg
+raspistill -v -o cam.jpg
 ```
 
 <br>
@@ -71,8 +75,10 @@ raspistill -o cam.jpg
 cd Iot_EdgeComputing/src/device/picamera
 raspivid -o pipi.h264 -t 10000
 
-# Play the video 
-omxplayer pipi.h264 
+# Play the video
+omxplayer pipi.h264
+
+# mp4 format is also supported
 ```
 
 <br>
@@ -93,7 +99,7 @@ fswebcam image.jpg
 fswebcam -S 20 2image.jpg
 ```
 
-<br> 
+<br>
 
 ### 4. Set up a usb web cam for video streaming
 ```
@@ -137,9 +143,9 @@ Multiple identities can be used for authentication:
  1.  ,,, (pi)
  2.  root
 Choose identity to authenticate as (1-2): 1
-Password: 
+Password:
 ==== AUTHENTICATION COMPLETE ===
-. ok 
+. ok
 --- Opening /dev/video0...
 Trying source module v4l2...
 /dev/video0 opened.
@@ -155,9 +161,9 @@ Multiple identities can be used for authentication:
  1.  ,,, (pi)
  2.  root
 Choose identity to authenticate as (1-2): 1
-Password: 
+Password:
 ==== AUTHENTICATION COMPLETE ===
-. ok 
+. ok
 
 '''
 
