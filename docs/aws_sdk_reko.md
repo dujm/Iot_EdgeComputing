@@ -162,7 +162,7 @@ aws rekognition detect-labels \
 
 <br>
 
-### 2. Reko Image recognition 
+### 2. Image recognition using Boto and Reko
 
 ### 2.1 An image uploaded to S3
 ```
@@ -350,11 +350,4 @@ os.chdir('..')
 
 <br>
 
----
-### Installation of packages used  in this tutorial
-```
-python -mpip install matplotlib
-pip install image
-conda install pandas
-conda install -y -c conda-forge opencv
-```
+
