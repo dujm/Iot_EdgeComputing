@@ -47,7 +47,7 @@ Up Seek +600
 
 <br>
 
-### 1. Set up a picamera taking photos
+### 1. Set up a picamera for taking photos
 
  * [Connect picamera with the Raspberry Pi](https://thepihut.com/blogs/raspberry-pi-tutorials/16021420-how-to-install-use-the-raspberry-pi-camera)
 
@@ -95,8 +95,8 @@ sudo usermod -a -G video pi
 # 3) Basic usage to take a photo
 fswebcam image.jpg
 
-# 4) If you are using an old camera and get black imagaes, skip the first 20 frames
-fswebcam -S 20 2image.jpg
+# 4) If you are using an old camera and get black images, skip the first 20 frames
+fswebcam -S 20 image2.jpg
 ```
 
 <br>
